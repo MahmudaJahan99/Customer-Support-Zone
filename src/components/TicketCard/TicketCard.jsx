@@ -1,5 +1,9 @@
+import { useContext } from "react";
+import { TicketContext } from "../TicketsContext";
+
 const TicketCard = ({ ticket }) => {
     const { createdAt, customer, description, id, priority, status, title } = ticket
+    const {handleSelectTicket} = useContext(TicketContext)
 
     const priorityColors = {
         Low: "text-green-500",
@@ -8,7 +12,7 @@ const TicketCard = ({ ticket }) => {
     }
 
     return (
-        <div>
+        <div onClick={() => handleSelectTicket(ticket)}>
             <div className="card bg-base-100 card-sm shadow-sm">
                 <div className="card-body min-h-37.5">
                     <div className="flex justify-between items-center">

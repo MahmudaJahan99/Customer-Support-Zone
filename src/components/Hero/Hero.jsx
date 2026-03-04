@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Hero = () => {
+const Hero = ({selectedTicket}) => {
     return (
         <div className='max-w-350 mx-auto flex flex-col md:flex-row gap-5 text-white text-center'>
             <div id='progress' className='w-full md:w-1/2 rounded-sm min-h-60 relative flex flex-col justify-center gap-3'>
@@ -9,7 +9,7 @@ const Hero = () => {
 
                 <div>
                     <h1>In-Progress</h1>
-                    <h2 className='text-3xl font-bold'>0</h2>
+                    <h2 className='text-3xl font-bold'>{selectedTicket.length}</h2>
                 </div>
             </div>
             <div id='resolved' className='w-full md:w-1/2 rounded-sm min-h-60 relative flex flex-col justify-center gap-3'>
