@@ -1,0 +1,137 @@
+[
+  {
+    "id": "TCK-1001",
+    "title": "Login page not loading",
+    "description": "Users report a blank screen when accessing the login page from Chrome browser.",
+    "customer": "Acme Corp",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-03-01T09:15:00Z"
+  },
+  {
+    "id": "TCK-1002",
+    "title": "Payment gateway timeout",
+    "description": "Transactions fail intermittently due to timeout errors from the payment provider.",
+    "customer": "Bright Retail",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2026-03-01T11:30:00Z"
+  },
+  {
+    "id": "TCK-1003",
+    "title": "Profile update not saving",
+    "description": "Customer profile changes are not persisting after clicking save.",
+    "customer": "Nova Industries",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2026-03-02T08:45:00Z"
+  },
+  {
+    "id": "TCK-1004",
+    "title": "Email notifications delayed",
+    "description": "System email notifications are delayed by 20–30 minutes.",
+    "customer": "GreenField Ltd",
+    "priority": "Low",
+    "status": "In Progress",
+    "createdAt": "2026-03-02T10:10:00Z"
+  },
+  {
+    "id": "TCK-1005",
+    "title": "Dashboard charts not rendering",
+    "description": "Analytics charts fail to load on the admin dashboard.",
+    "customer": "TechSphere",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-03-02T14:22:00Z"
+  },
+  {
+    "id": "TCK-1006",
+    "title": "Incorrect invoice total",
+    "description": "Generated invoices show incorrect tax calculations.",
+    "customer": "Urban Supplies",
+    "priority": "High",
+    "status": "Resolved",
+    "createdAt": "2026-03-03T07:55:00Z"
+  },
+  {
+    "id": "TCK-1007",
+    "title": "Search functionality slow",
+    "description": "Product search takes more than 10 seconds to return results.",
+    "customer": "Bright Retail",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2026-03-03T09:40:00Z"
+  },
+  {
+    "id": "TCK-1008",
+    "title": "Mobile layout broken on iOS",
+    "description": "UI elements overlap on Safari browser for iPhone 13.",
+    "customer": "Acme Corp",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2026-03-03T12:05:00Z"
+  },
+  {
+    "id": "TCK-1009",
+    "title": "API returning 500 error",
+    "description": "Internal server error when fetching order history via API.",
+    "customer": "Nova Industries",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-03-03T13:20:00Z"
+  },
+  {
+    "id": "TCK-1010",
+    "title": "Unable to reset password",
+    "description": "Password reset link expires immediately after generation.",
+    "customer": "GreenField Ltd",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2026-03-03T15:18:00Z"
+  },
+  {
+    "id": "TCK-1011",
+    "title": "Data export missing columns",
+    "description": "CSV export does not include customer phone numbers.",
+    "customer": "TechSphere",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2026-03-03T16:45:00Z"
+  },
+  {
+    "id": "TCK-1012",
+    "title": "Session timeout too short",
+    "description": "Users are logged out after 5 minutes of inactivity.",
+    "customer": "Urban Supplies",
+    "priority": "Low",
+    "status": "Resolved",
+    "createdAt": "2026-03-04T08:10:00Z"
+  },
+  {
+    "id": "TCK-1013",
+    "title": "File upload failing",
+    "description": "PDF uploads larger than 5MB fail without error message.",
+    "customer": "Acme Corp",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-03-04T09:25:00Z"
+  },
+  {
+    "id": "TCK-1014",
+    "title": "Two-factor authentication error",
+    "description": "Users receive invalid OTP error despite entering correct code.",
+    "customer": "Bright Retail",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2026-03-04T10:50:00Z"
+  },
+  {
+    "id": "TCK-1015",
+    "title": "Broken link in footer",
+    "description": "Privacy Policy link in the footer leads to a 404 page.",
+    "customer": "Nova Industries",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2026-03-04T11:30:00Z"
+  }
+]
