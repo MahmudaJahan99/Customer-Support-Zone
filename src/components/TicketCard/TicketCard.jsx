@@ -32,7 +32,7 @@ const TicketCard = ({ ticket }) => {
                         <div className="flex gap-2 md:gap-5">
                             <span>{customer}</span>
                             <span>
-                                <i class="fa-regular fa-calendar mr-2"></i>
+                                <i className="fa-regular fa-calendar mr-2"></i>
                                 {createdAt.split("T")[0].split("-").join("/")}
                             </span>
                         </div>

@@ -9,7 +9,7 @@ const Status = () => {
             <h4 className="text-2xl font-bold my-5 mt-10">Task Status</h4>
             {
                 selectedTicket.length > 0 ?
-                    selectedTicket.map(t => <p>{t.title}</p>)
+                    selectedTicket.map(t => <p key={t.id}>{t.title}</p>)
                     : <p>Select a ticket to add to Task Status</p>
             }
         </div>
