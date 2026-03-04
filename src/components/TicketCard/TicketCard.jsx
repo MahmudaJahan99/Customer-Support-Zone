@@ -24,11 +24,13 @@ const TicketCard = ({ ticket }) => {
                     </div>
 
                     <p>{description}</p>
+
                     <div className="flex justify-between gap-2 text-gray-500">
                         <div className="flex gap-2 md:gap-5">
                             <span>{id}</span>
                             <span className={`uppercase font-semibold ${priorityColors[priority] || "text-gray-500"}`}>{priority} priority</span>
                         </div>
+                        
                         <div className="flex gap-2 md:gap-5">
                             <span>{customer}</span>
                             <span>

@@ -5,6 +5,7 @@ import { TicketContext } from "../TicketsContext";
 const Tickets = () => {
     const { ticketsPromise } = useContext(TicketContext)
     const ticketData = use(ticketsPromise)
+
     return (
         <div>
             <h3 className="text-2xl font-bold my-5 mt-10">Customer Tickets</h3>
@@ -15,8 +16,6 @@ const Tickets = () => {
                     ))
                 }
             </div>
-
-
         </div>
     );
 };

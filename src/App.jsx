@@ -19,10 +19,12 @@ function App() {
   /******************** STATE MANAGEMENT ********************/
   const [selectedTicket, setSelectedTicket] = useState([])
 
+  /******************** HANDLE CARD CLICK ********************/
   const handleSelectTicket = (ticket) => {
-    setSelectedTicket(prev  => [...prev, ticket])
+    setSelectedTicket(prev => [...prev, ticket])
     console.log(selectedTicket)
   }
+
   return (
     <>
       <header>
@@ -33,6 +35,7 @@ function App() {
           <Hero selectedTicket={selectedTicket} />
         </section>
       </header>
+
       <main className='my-5 grid md:grid-cols-5 gap-3 max-w-350 mx-auto'>
         <TicketContext.Provider value={{ ticketsPromise, selectedTicket, setSelectedTicket, handleSelectTicket, }}>
           <div className='col-span-4'>
@@ -48,7 +51,10 @@ function App() {
         </TicketContext.Provider>
       </main>
 
-      <Footer />
+      <footer>
+        <Footer />
+      </footer>
+
     </>
   )
 }

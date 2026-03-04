@@ -1,51 +1,47 @@
-import React from 'react';
-
 const Header = () => {
     return (
-        <>
-            <div className="navbar bg-base-100 max-w-350 mx-auto">
-                {/******************** LOGO ********************/}
-                <div className="navbar-start">
-                    <a className="text-xl font-bold">CS — Ticket System</a>
+        <div className="navbar bg-base-100 max-w-350 mx-auto">
+            {/******************** LOGO ********************/}
+            <div className="navbar-start">
+                <a className="text-xl font-bold">CS — Ticket System</a>
+            </div>
+
+            {/******************** NAVBAR END ********************/}
+            <div className="navbar-end">
+                {/******************** NAVBAR CENTER ********************/}
+                <div className="navbar-center hidden lg:flex">
+                    <ul className="menu menu-horizontal px-1">
+                        <li><a>Home</a></li>
+                        <li><a>FAQ</a></li>
+                        <li><a>Changelog</a></li>
+                        <li><a>Blog</a></li>
+                        <li><a>Download</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
                 </div>
-                
-                {/******************** NAVBAR END ********************/}
-                <div className="navbar-end">
-                    {/******************** NAVBAR CENTER ********************/}
-                    <div className="navbar-center hidden lg:flex">
-                        <ul className="menu menu-horizontal px-1">
-                            <li><a>Home</a></li>
-                            <li><a>FAQ</a></li>
-                            <li><a>Changelog</a></li>
-                            <li><a>Blog</a></li>
-                            <li><a>Download</a></li>
-                            <li><a>Contact</a></li>
-                        </ul>
+                {/******************** BUTTON ********************/}
+                <a className="btn primary-button">
+                    <span>+</span>
+                    <span>New Ticket</span>
+                </a>
+                {/******************** DROPDOWN ********************/}
+                <div className="dropdown dropdown-end">
+                    <div tabIndex="0" role="button" className="btn btn-ghost m-1 lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
                     </div>
-                    {/******************** BUTTON ********************/}
-                    <a className="btn primary-button">
-                        <span>+</span>
-                        <span>New Ticket</span>
-                    </a>
-                    {/******************** DROPDOWN ********************/}
-                    <div className="dropdown dropdown-end">
-                        <div tabIndex="0" role="button" className="btn btn-ghost m-1 lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
-                        </div>
-                        <ul
-                            tabIndex="-1"
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                            <li><a>Home</a></li>
-                            <li><a>FAQ</a></li>
-                            <li><a>Changelog</a></li>
-                            <li><a>Blog</a></li>
-                            <li><a>Download</a></li>
-                            <li><a>Contact</a></li>
-                        </ul>
-                    </div>
+                    <ul
+                        tabIndex="-1"
+                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        <li><a>Home</a></li>
+                        <li><a>FAQ</a></li>
+                        <li><a>Changelog</a></li>
+                        <li><a>Blog</a></li>
+                        <li><a>Download</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 
