@@ -1,0 +1,36 @@
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.primary-button {
+    background: linear-gradient(45deg, #632EE3, #9F62F2);
+    color: white;
+}
+
+#progress {
+    background: linear-gradient(45deg, #632EE3, #9F62F2);
+}
+
+#resolved {
+    background: linear-gradient(45deg, #00827A, #54CF68);
+}
+
+.lines{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('./assets/images/vector1.png');
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 50%;
+}
+.lines-mirrored{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url('./assets/images/vector1.png');
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 50%;
+    transform: scaleX(-1)
+}

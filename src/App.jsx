@@ -1,11 +1,19 @@
 import './App.css'
+import Header from './components/Header/Header'
+import Hero from './components/Hero/Hero'
 
 function App() {
   return (
     <>
-      <h1>
-        Everything is installed and ready
-      </h1>
+      <header>
+        <nav className='mb-5 shadow-sm'>
+          <Header />
+        </nav>
+        <section>
+          <Hero />
+        </section>
+      </header>
+
     </>
   )
 }
