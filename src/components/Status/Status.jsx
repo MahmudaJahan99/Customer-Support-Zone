@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 
 const Status = () => {
     const notify = () => toast("Task Completed!");
-    const { selectedTicket, handleResolvedTicket } = useContext(TicketContext)
+    const { selectedTicket, handleCompleteBtn } = useContext(TicketContext)
 
     return (
         <div>
@@ -15,7 +15,7 @@ const Status = () => {
                         <div className="card-body">
                             <h5 className="card-title">{t.title}</h5>
                             <div className="card-actions">
-                                <button onClick={() => (handleResolvedTicket(t), notify())} className="btn bg-green-600 text-white w-full">Complete</button>
+                                <button onClick={() => (handleCompleteBtn(t), notify())} className="btn bg-green-600 text-white w-full">Complete</button>
                             </div>
                         </div>
                     </div>)

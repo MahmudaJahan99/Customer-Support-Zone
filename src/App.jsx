@@ -1,4 +1,4 @@
-import { Suspense, useState } from 'react'
+import { Suspense, useEffect, useState } from 'react'
 import './App.css'
 import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
@@ -9,24 +9,28 @@ import Status from './components/Status/Status'
 import Resolved from './components/Resolved/Resolved'
 import { ToastContainer } from 'react-toastify'
 
-/******************** FETCH DATA ********************/
-const fetchTickets = async () => {
-  const res = await fetch("/mockTickets.json")
-  return res.json()
-}
-const ticketsPromise = fetchTickets()
-
 function App() {
   /******************** STATE MANAGEMENT ********************/
+  const [allTickets, setAllTickets] = useState([])
   const [selectedTicket, setSelectedTicket] = useState([])
   const [resolvedTicket, setResolvedTicket] = useState([])
+
+  /******************** FETCH DATA ********************/
+  useEffect(() => {
+    const fetchTickets = async () => {
+      const res = await fetch("/mockTickets.json")
+      const data = await res.json()
+      setAllTickets(data)
+    }
+    fetchTickets()
+  }, [])
 
   /******************** HANDLE CARD CLICK ********************/
   const handleSelectTicket = (ticket) => {
     setSelectedTicket(prev => [...prev, ticket])
   }
 
-  const handleResolvedTicket = (ticket) => {
+  const handleCompleteBtn = (ticket) => {
     setResolvedTicket(prev => [...prev, ticket])
     const selectedListUpdate = selectedTicket.filter(t => t.id !== ticket.id)
     setSelectedTicket(selectedListUpdate)
@@ -44,7 +48,7 @@ function App() {
       </header>
 
       <main className='my-5 grid md:grid-cols-5 gap-3 max-w-350 mx-auto'>
-        <TicketContext.Provider value={{ ticketsPromise, selectedTicket, handleSelectTicket, resolvedTicket, handleResolvedTicket }}>
+        <TicketContext.Provider value={{ allTickets, selectedTicket, handleSelectTicket, resolvedTicket, handleCompleteBtn }}>
           <div className='md:col-span-4'>
             <Suspense fallback={<p>Loading tickets...</p>}>
               <Tickets />
