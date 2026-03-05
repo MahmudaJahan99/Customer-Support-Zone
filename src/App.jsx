@@ -27,6 +27,10 @@ function App() {
 
   /******************** HANDLE CARD CLICK ********************/
   const handleSelectTicket = (ticket) => {
+    for(let t of selectedTicket) {
+      if(t.id === ticket.id) return
+    }
+    
     setSelectedTicket(prev => [...prev, ticket])
   }
 
