@@ -34,6 +34,9 @@ function App() {
     setResolvedTicket(prev => [...prev, ticket])
     const selectedListUpdate = selectedTicket.filter(t => t.id !== ticket.id)
     setSelectedTicket(selectedListUpdate)
+
+    const allListUpdate = allTickets.filter(t => t.id !== ticket.id)
+    setAllTickets(allListUpdate)
   }
 
   return (
