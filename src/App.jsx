@@ -18,11 +18,15 @@ const ticketsPromise = fetchTickets()
 function App() {
   /******************** STATE MANAGEMENT ********************/
   const [selectedTicket, setSelectedTicket] = useState([])
+  const [resolvedTicket, setResolvedTicket] = useState([])
 
   /******************** HANDLE CARD CLICK ********************/
   const handleSelectTicket = (ticket) => {
     setSelectedTicket(prev => [...prev, ticket])
-    console.log(selectedTicket)
+  }
+
+  const handleResolvedTicket = (ticket) => {
+    setResolvedTicket(prev  => [...prev, ticket])
   }
 
   return (
@@ -32,12 +36,12 @@ function App() {
           <Header />
         </nav>
         <section>
-          <Hero selectedTicket={selectedTicket} />
+          <Hero selectedTicket={selectedTicket} resolvedTicket={resolvedTicket} />
         </section>
       </header>
 
       <main className='my-5 grid md:grid-cols-5 gap-3 max-w-350 mx-auto'>
-        <TicketContext.Provider value={{ ticketsPromise, selectedTicket, setSelectedTicket, handleSelectTicket, }}>
+        <TicketContext.Provider value={{ ticketsPromise, selectedTicket, handleSelectTicket, resolvedTicket, handleResolvedTicket }}>
           <div className='col-span-4'>
             <Suspense fallback={<p>Loading tickets...</p>}>
               <Tickets />

@@ -1,4 +1,4 @@
-const Hero = ({ selectedTicket }) => {
+const Hero = ({ selectedTicket, resolvedTicket }) => {
     return (
         <div className='max-w-350 mx-auto flex flex-col md:flex-row gap-5 text-white text-center'>
             {/******************** IN PROGRESS ********************/}
@@ -19,7 +19,7 @@ const Hero = ({ selectedTicket }) => {
 
                 <div>
                     <h1>Resolved</h1>
-                    <h2 className='text-3xl font-bold'>0</h2>
+                    <h2 className='text-3xl font-bold'>{resolvedTicket.length}</h2>
                 </div>
             </div>
         </div>
