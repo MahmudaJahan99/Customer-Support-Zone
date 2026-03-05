@@ -7,6 +7,7 @@ import Tickets from './components/Tickets/Tickets'
 import { TicketContext } from './components/TicketsContext'
 import Status from './components/Status/Status'
 import Resolved from './components/Resolved/Resolved'
+import { ToastContainer } from 'react-toastify'
 
 /******************** FETCH DATA ********************/
 const fetchTickets = async () => {
@@ -26,7 +27,7 @@ function App() {
   }
 
   const handleResolvedTicket = (ticket) => {
-    setResolvedTicket(prev  => [...prev, ticket])
+    setResolvedTicket(prev => [...prev, ticket])
   }
 
   return (
@@ -42,7 +43,7 @@ function App() {
 
       <main className='my-5 grid md:grid-cols-5 gap-3 max-w-350 mx-auto'>
         <TicketContext.Provider value={{ ticketsPromise, selectedTicket, handleSelectTicket, resolvedTicket, handleResolvedTicket }}>
-          <div className='col-span-4'>
+          <div className='md:col-span-4'>
             <Suspense fallback={<p>Loading tickets...</p>}>
               <Tickets />
             </Suspense>
@@ -58,7 +59,8 @@ function App() {
       <footer>
         <Footer />
       </footer>
-
+      
+      <ToastContainer />
     </>
   )
 }
