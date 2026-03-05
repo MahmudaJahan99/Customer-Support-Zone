@@ -7,6 +7,7 @@ JSX is used to -
  3. Helps React efficiently update the DOM
  4. Improves developer productivity
 
+
 **What is the difference between State and Props?**
 
 In React, both *State* and *Props* are used to store data that influences the output of a render, but they function differently:
@@ -14,19 +15,15 @@ In React, both *State* and *Props* are used to store data that influences the ou
 |  *Feature* |                       *State*                            |                         *Props*                            |
 |------------|------------------------------------------------|------------------------------------------------------------|
 |Definition  | Data managed internally by a component.        | Data passed from a parent component to a child component.  |
-|------------|------------------------------------------------|------------------------------------------------------------|
 |Mutability  | Mutable (Updated via set functions).           | Immutable (Read-only for the child)                        |
-|------------|------------------------------------------------|------------------------------------------------------------|
 |Ownership   | The component itself.                          | Parent component                                           |
-|------------|------------------------------------------------|------------------------------------------------------------|
 |Purpose     | Used to manage dynamic data within a component.| Used to pass information between components.               |
-|------------|------------------------------------------------|------------------------------------------------------------|
 |Example     | ```                                            | ```                                                        |
 |            | const [count, setCount] = useState(0);         | function Greeting(props) {                                 |
 |            | ```                                            |   return <h1>Hello {props.name}</h1>;                      |
 |            |                                                | }                                                          |
 |            |                                                | ```                                                        |
-|------------|------------------------------------------------|------------------------------------------------------------|
+
 
 **What is the useState hook, and how does it work?**
 
@@ -55,12 +52,14 @@ How it works:
  - setCount() updates the state.
  - When the state changes, React re-renders the component.
 
+
 **How can you share state between components in React?**
 
 State can be shared between components using several methods:
  1. Lifting State Up: Move the state to the closest common parent component and pass it down using props.
  2. Context API: React Context allows global data sharing without passing props through every component.
  3. State Management Libraries: For massive applications, tools like Redux, Zustand, or Recoil provide a centralized store outside the component tree.
+
 
 **How is event handling done in React?**
 
