@@ -28,6 +28,8 @@ function App() {
 
   const handleResolvedTicket = (ticket) => {
     setResolvedTicket(prev => [...prev, ticket])
+    const selectedListUpdate = selectedTicket.filter(t => t.id !== ticket.id)
+    setSelectedTicket(selectedListUpdate)
   }
 
   return (
@@ -59,7 +61,7 @@ function App() {
       <footer>
         <Footer />
       </footer>
-      
+
       <ToastContainer />
     </>
   )
