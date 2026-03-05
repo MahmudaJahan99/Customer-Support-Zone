@@ -9,9 +9,9 @@ const Resolved = () => {
             <h4 className="text-2xl font-bold my-5 mt-10">Resolved Task</h4>
             {
                 resolvedTicket.length > 0 ?
-                    resolvedTicket.map(t => <div key={t.id} className="card card-border bg-base-100">
+                    resolvedTicket.map(t => <div key={t.id} className="card card-border bg-green-100">
                         <div className="card-body">
-                            <h5 className="card-title">{t.title}</h5>
+                            <h5 className="font-semibold">{t.title}</h5>
                         </div>
                     </div>)
                     : <p>No resolved tasks yet</p>

@@ -1,7 +1,9 @@
 import { useContext } from "react";
 import { TicketContext } from "../TicketsContext";
+import { toast } from "react-toastify";
 
 const TicketCard = ({ ticket }) => {
+    const notify = () => toast("Task Added!");
     const { createdAt, customer, description, id, priority, status, title } = ticket
     const {handleSelectTicket} = useContext(TicketContext)
 
@@ -12,7 +14,7 @@ const TicketCard = ({ ticket }) => {
     }
 
     return (
-        <div onClick={() => handleSelectTicket(ticket)}>
+        <div onClick={() => (handleSelectTicket(ticket), notify())}>
             <div className="card bg-base-100 card-sm shadow-sm">
                 <div className="card-body min-h-37.5">
                     <div className="flex justify-between items-center">
